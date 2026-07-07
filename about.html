@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The CLEAR-DST framework — Leadership, Environment, Architecture, Resources — and the academic theory behind each dimension.">
+<meta name="theme-color" content="#FFFFFF">
+<title>Framework · CLEAR-DST</title>
+<link rel="icon" href="assets/cleardst-logo-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main" class="sr-skip">Skip to content</a>
+<div id="progress"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" aria-label="CLEAR-DST home">
+      <img src="assets/cleardst-logo-icon.png" alt="">
+      <span class="wm-cd"><span class="w1">CLEAR-DST</span><span class="w2">Cultural Diagnostic Tool</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="about.html">Framework</a>
+      <a href="survey.html">Survey</a>
+      <a href="report.html">Report</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="survey.html" class="btn btn-primary">Start the Survey</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu">
+    <a href="about.html">Framework</a>
+    <a href="survey.html">Survey</a>
+    <a href="report.html">Report</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="survey.html" class="btn btn-primary">Start the Survey</a>
+  </div>
+</nav>
+<main id="main">
+<section class="phero">
+  <div class="wrap content reveal">
+    <span class="eyebrow"><span class="dot"></span> Methodology</span>
+    <h1>The LEAR Framework</h1>
+    <p>CLEAR-DST rates innovation readiness across four theoretically-anchored dimensions, each translated into concrete, project-level survey statements.</p>
+  </div>
+</section>
+
+<section class="section" id="dimensions">
+  <div class="wrap">
+    <div class="steps" style="grid-template-columns:repeat(2,1fr);gap:24px">
+      <div class="card leadership reveal">
+        <div class="dim-tag leadership"><i></i>Leadership</div>
+        <h3 style="margin-top:14px">Idea cultivation &amp; psychological safety</h3>
+        <p><b style="color:var(--ink)">Anchor:</b> Edmondson (1999) — psychological safety theory. Leadership items ask whether leaders cultivate ideas, create safety to raise concerns, give clear direction, enable collaboration, give useful feedback, stay open to challenge, champion change, remove barriers, and support experimentation. 9 items.</p>
+      </div>
+      <div class="card environment reveal" style="transition-delay:70ms">
+        <div class="dim-tag environment"><i></i>Environment</div>
+        <h3 style="margin-top:14px">Social capital between stakeholders</h3>
+        <p><b style="color:var(--ink)">Anchor:</b> Nahapiet &amp; Ghoshal (1998) — structural social capital theory. Environment items assess collaboration, information sharing, early engagement, transparent decisions, trust and respect, contractual alignment, knowledge transfer, digital tool support, and conflict management between clients, consultants and contractors. 9 items.</p>
+      </div>
+      <div class="card architecture reveal" style="transition-delay:140ms">
+        <div class="dim-tag architecture"><i></i>Architecture</div>
+        <h3 style="margin-top:14px">Structural ambidexterity</h3>
+        <p><b style="color:var(--ink)">Anchor:</b> O'Reilly &amp; Tushman (2013) — organisational ambidexterity. Architecture items cover role clarity, governance effectiveness, decision timeliness, change-process clarity, escalation, interdisciplinary coordination, risk management, lessons-learned integration and information management. 9 items.</p>
+      </div>
+      <div class="card resources reveal" style="transition-delay:210ms">
+        <div class="dim-tag resources"><i></i>Resources</div>
+        <h3 style="margin-top:14px">Organisational slack</h3>
+        <p><b style="color:var(--ink)">Anchor:</b> Nohria &amp; Gulati (1996) — unabsorbed organisational slack. Resources items ask about time, staffing, technical expertise, specialist skills, budget flexibility, tool accessibility, training, technical support and surge capacity. 9 items.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span> Instrument Design</span>
+      <h2>36 Items, Refined Through Pilot Testing</h2>
+      <p>The full-scale instrument was refined from a larger pilot pool. Four items were removed where pilot analysis showed cross-dimension duplication or theoretical misfit — keeping each dimension conceptually distinct and each of the 36 remaining items pulling its own weight.</p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><div class="num">36</div><div class="lbl">Items Retained</div></div>
+      <div class="stat reveal"><div class="num">4</div><div class="lbl">Items Removed at Pilot</div></div>
+      <div class="stat reveal"><div class="num">1–5</div><div class="lbl">Likert Response Scale</div></div>
+      <div class="stat reveal"><div class="num">9</div><div class="lbl">Items per Dimension</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span> Section 2</span>
+      <h2>Linking Culture to Cost</h2>
+      <p>A second, 13-item module captures professional background and — where relevant — departure or retention experience. This isn't just demographic colour: it's the data that lets the report attribute turnover risk directly to a LEAR dimension.</p>
+    </div>
+    <div class="media-band">
+      <div class="reveal card">
+        <div class="spot"></div>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Professional Profile</h3>
+        <p>Role, sector, organisation size, country and experience — used to contextualise the report and, in the underlying cost model, to segment salary-band benchmarks.</p>
+      </div>
+      <div class="reveal card" style="transition-delay:80ms">
+        <div class="spot"></div>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+        <h3>Departure &amp; Knowledge Loss</h3>
+        <p>Primary and contributing reasons for leaving are mapped directly onto Leadership, Environment, Architecture or Resources — plus vacancy duration, ramp-up time and how much project knowledge was captured before someone left.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <span class="eyebrow"><span class="dot"></span> See It In Practice</span>
+      <h2>Take the Diagnostic</h2>
+      <p>36 items, then 13 background questions. Roughly 10–14 minutes in total.</p>
+      <div class="hero-cta">
+        <a href="survey.html" class="btn btn-primary">Start the Survey<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand">
+          <img src="assets/cleardst-logo-icon.png" alt="" style="height:40px">
+          <span class="wm-cd"><span class="w1">CLEAR-DST</span><span class="w2">Cultural Diagnostic Tool</span></span>
+        </div>
+        <p class="bl">A cultural diagnostic instrument for construction project organisations, developed as part of doctoral research at University College Dublin.</p>
+      </div>
+      <div class="foot-col"><h5>Tool</h5><a href="about.html">Framework</a><a href="survey.html">Take the Survey</a><a href="report.html">Sample Report</a></div>
+      <div class="foot-col"><h5>Study</h5><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+      <div class="foot-col"><h5>Contact</h5><a href="mailto:research@cleardst.ie">research@cleardst.ie</a><li>University College Dublin</li></div>
+    </div>
+    <div class="foot-bar"><span>© 2026 CLEAR-DST · Doctoral Research, UCD</span><span>Ethically approved · Fully anonymous</span></div>
+  </div>
+</footer>
+<button id="totop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="app.js"></script>
+</body>
+</html>
