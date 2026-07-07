@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Take the CLEAR-DST cultural diagnostic survey — 36 items across Leadership, Environment, Architecture and Resources, plus a short background module.">
+<meta name="theme-color" content="#FFFFFF">
+<title>Take the Survey · CLEAR-DST</title>
+<link rel="icon" href="assets/cleardst-logo-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main" class="sr-skip">Skip to content</a>
+<div id="progress"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" aria-label="CLEAR-DST home">
+      <img src="assets/cleardst-logo-icon.png" alt="">
+      <span class="wm-cd"><span class="w1">CLEAR-DST</span><span class="w2">Cultural Diagnostic Tool</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="about.html">Framework</a>
+      <a href="survey.html" class="active">Survey</a>
+      <a href="report.html">Report</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu">
+    <a href="about.html">Framework</a>
+    <a href="survey.html">Survey</a>
+    <a href="report.html">Report</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+<main id="main">
+<div class="survey-progress-wrap">
+  <div class="wrap survey-shell">
+    <div class="survey-progress-top">
+      <span class="sp-label" id="sp-label">Step 1 of 9</span>
+      <span class="sp-pct" id="sp-pct">0%</span>
+    </div>
+    <div class="survey-track"><div class="survey-fill" id="survey-fill"></div></div>
+  </div>
+</div>
+<section class="section" style="padding-top:0">
+  <div class="wrap survey-shell">
+    <div id="survey-root"></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-bar" style="border-top:none;padding-top:0"><span>© 2026 CLEAR-DST · Doctoral Research, UCD</span><span>Ethically approved · Fully anonymous</span></div>
+  </div>
+</footer>
+<script src="survey-data.js"></script>
+<script src="app.js"></script>
+<script src="survey.js"></script>
+</body>
+</html>

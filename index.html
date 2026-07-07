@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CLEAR-DST — a cultural diagnostic tool for construction project organisations. Take the survey, get a bespoke report with the interventions required.">
+<meta name="theme-color" content="#FFFFFF">
+<title>CLEAR-DST · Cultural Diagnostic Tool</title>
+<link rel="icon" href="assets/cleardst-logo-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main" class="sr-skip">Skip to content</a>
+<div id="progress"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" aria-label="CLEAR-DST home">
+      <img src="assets/cleardst-logo-icon.png" alt="">
+      <span class="wm-cd"><span class="w1">CLEAR-DST</span><span class="w2">Cultural Diagnostic Tool</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="about.html">Framework</a>
+      <a href="survey.html">Survey</a>
+      <a href="report.html">Report</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="survey.html" class="btn btn-primary">Start the Survey</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu">
+    <a href="about.html">Framework</a>
+    <a href="survey.html">Survey</a>
+    <a href="report.html">Report</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="survey.html" class="btn btn-primary">Start the Survey</a>
+  </div>
+</nav>
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow"><span class="dot"></span> Construction Innovation Readiness</span>
+      <h1>Diagnose the Culture Behind Innovation Readiness</h1>
+      <p class="lead">CLEAR-DST measures the four organisational conditions that determine whether a construction project can absorb change — Leadership, Environment, Architecture and Resources — then turns your scores into a bespoke report with the specific interventions required.</p>
+      <div class="hero-cta">
+        <a href="survey.html" class="btn btn-primary" data-magnetic>Start the Survey<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="about.html" class="btn btn-ghost">How the Framework Works</a>
+      </div>
+      <div class="hero-meta">
+        <div class="m"><b>36 items</b><span>Section 1 · LEAR Survey</span></div>
+        <div class="m"><b>8–10 min</b><span>Completion Time</span></div>
+        <div class="m"><b>100% anonymous</b><span>UCD Ethics Approved</span></div>
+      </div>
+    </div>
+    <div class="reveal panel" data-tilt style="transition-delay:120ms">
+      <div class="panel-glow"></div>
+      <div class="scanline"></div>
+      <div class="panel-top">
+        <span class="tag">Sample Readiness Snapshot</span>
+        <span class="live"><i></i>Illustrative</span>
+      </div>
+      <div class="bigval" data-count="3.4" data-dec="1">0.0</div>
+      <div class="panel-sub">Overall LEAR Score / 5.0</div>
+      <div class="panel-rows">
+        <div class="prow"><span>Leadership</span><b>3.7 · Developing</b></div>
+        <div class="prow"><span>Environment</span><b>3.1 · Developing</b></div>
+        <div class="prow"><span>Architecture</span><b>2.6 · Needs Attention</b></div>
+        <div class="prow"><span>Resources</span><b>4.2 · Strength</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat reveal"><div class="num" data-count="36">0</div><div class="lbl">Diagnostic Items</div></div>
+      <div class="stat reveal"><div class="num" data-count="4">0</div><div class="lbl">LEAR Dimensions</div></div>
+      <div class="stat reveal"><div class="num" data-count="13">0</div><div class="lbl">Background &amp; Cost Items</div></div>
+      <div class="stat reveal"><div class="num" data-count="100" data-suffix="%">0</div><div class="lbl">Anonymous Responses</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span> The LEAR Framework</span>
+      <h2>Four Conditions. One Diagnostic.</h2>
+      <p>Each dimension is anchored in an established organisational theory, then translated into observable, project-level statements your team rates from 1–5.</p>
+    </div>
+    <div class="quad">
+      <div class="qcell q-l reveal"><h4>Leadership</h4><span>Edmondson (1999) · Psychological safety &amp; idea cultivation</span></div>
+      <div class="qcell q-e reveal" style="transition-delay:70ms"><h4>Environment</h4><span>Nahapiet &amp; Ghoshal (1998) · Social capital between stakeholders</span></div>
+      <div class="qcell q-a reveal" style="transition-delay:140ms"><h4>Architecture</h4><span>O'Reilly &amp; Tushman (2013) · Structural ambidexterity</span></div>
+      <div class="qcell q-r reveal" style="transition-delay:210ms"><h4>Resources</h4><span>Nohria &amp; Gulati (1996) · Organisational slack</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="showcase">
+  <div class="sc-tint"></div>
+  <div class="sc-spot"></div>
+  <div class="sc-scan"></div>
+  <div class="wrap content reveal">
+    <span class="eyebrow"><span class="dot"></span> From Score to Action</span>
+    <h2>A Bespoke Report — Not Just a Score</h2>
+    <p>Completing the survey generates a report specific to your answers: dimension-by-dimension scoring against RED / AMBER / GREEN thresholds, the five priority interventions ranked by weakest indicator, and — where departure or turnover data is provided — a direct link between culture and workforce cost.</p>
+  </div>
+  <div class="chip c1"><span class="ld"></span><div><span class="lab">Priority Actions</span><b>Ranked by score</b></div></div>
+  <div class="chip c2"><div><span class="lab">Turnover Link</span><b>LEAR-attributed</b></div></div>
+  <div class="chip c3"><div><span class="lab">Format</span><b>Print-ready PDF</b></div></div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span> Why It Matters</span>
+      <h2>Culture Has a Cost Line</h2>
+      <p>Section 2 of the survey links departure and retention experience to the LEAR dimensions — so a low Architecture score isn't just a diagnostic footnote, it's connected to knowledge loss, vacancy duration and disengagement cost.</p>
+    </div>
+    <div class="media-band">
+      <div class="media-copy reveal">
+        <h3 style="font-size:14px;text-transform:uppercase;letter-spacing:.1em;color:var(--navy);margin-bottom:14px">Built for construction project organisations</h3>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>36-item innovation readiness instrument across four LEAR dimensions</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>13-item background &amp; departure module for turnover-cost attribution</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Instant, bespoke intervention report — no waiting on a consultant</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Fully anonymous, ethically approved (UCD Human Research Ethics Committee)</li>
+        </ul>
+      </div>
+      <div class="reveal card leadership" style="transition-delay:100ms">
+        <div class="spot"></div>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+        <h3>From Diagnosis to Action</h3>
+        <p>Every dimension score is paired with the specific, practical intervention linked to your lowest-scoring indicators — not generic advice. Interventions are grounded in the same organisational literature that anchors the framework.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <span class="eyebrow"><span class="dot"></span> Ready When You Are</span>
+      <h2>See Where Your Organisation Stands</h2>
+      <p>8–10 minutes. Fully anonymous. A bespoke report at the end.</p>
+      <div class="hero-cta">
+        <a href="survey.html" class="btn btn-primary">Start the Survey<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand">
+          <img src="assets/cleardst-logo-icon.png" alt="" style="height:40px">
+          <span class="wm-cd"><span class="w1">CLEAR-DST</span><span class="w2">Cultural Diagnostic Tool</span></span>
+        </div>
+        <p class="bl">A cultural diagnostic instrument for construction project organisations, developed as part of doctoral research at University College Dublin.</p>
+      </div>
+      <div class="foot-col"><h5>Tool</h5><a href="about.html">Framework</a><a href="survey.html">Take the Survey</a><a href="report.html">Sample Report</a></div>
+      <div class="foot-col"><h5>Study</h5><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+      <div class="foot-col"><h5>Contact</h5><a href="mailto:research@cleardst.ie">research@cleardst.ie</a><li>University College Dublin</li></div>
+    </div>
+    <div class="foot-bar"><span>© 2026 CLEAR-DST · Doctoral Research, UCD</span><span>Ethically approved · Fully anonymous</span></div>
+  </div>
+</footer>
+
+<button id="totop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="app.js"></script>
+</body>
+</html>
