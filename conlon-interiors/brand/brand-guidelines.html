@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conlon Interiors Brand Guidelines</title>
+  <meta name="description" content="Logo, colour, typography and tone-of-voice guidelines for Conlon Interiors.">
+  <link rel="icon" href="../assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#14181d; --charcoal:#1F262E; --slate:#2c3540; --steel:#4a545f; --muted:#6f7780; --line:#e3ddd3; --stone:#ece6dc; --linen:#f4efe7; --paper:#faf7f2; --oak:#C9A97A; --oak-deep:#a4834f; --ember:#F28A1F; --ember-deep:#d9740f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.6; }
+    h1,h2,h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.1; margin: 0 0 .4em; }
+    h1 { font-size: clamp(2.6rem,6vw,4.4rem); font-weight: 500; }
+    h2 { font-size: clamp(1.8rem,3.5vw,2.6rem); }
+    h3 { font-size: 1.4rem; }
+    .eyebrow { font-family: 'Bebas Neue', sans-serif; letter-spacing: .18em; color: var(--ember); display: inline-flex; gap: 12px; align-items: center; margin-bottom: 10px; }
+    .eyebrow::before { content:''; width: 28px; height: 2px; background: currentColor; }
+    .wrap { width: min(1100px, 100% - 48px); margin: auto; }
+    section { padding: 72px 0; border-bottom: 1px solid var(--line); }
+    .cover { background: var(--charcoal); color: #fff; padding: 120px 0; }
+    .cover p { color: #c9ced4; max-width: 60ch; font-size: 1.1rem; }
+    .grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .tile { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: #fff; }
+    .tile .art { display: grid; place-items: center; padding: 32px; min-height: 200px; background-image: linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%), linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%); background-size: 20px 20px; background-position: 0 0, 10px 10px; }
+    .tile .art.dark { background: var(--charcoal); } .tile .art.light { background: #fff; } .tile .art.ember { background: var(--ember); } .tile .art.linen { background: var(--linen); }
+    .tile img { max-width: 100%; max-height: 160px; }
+    .tile .cap { padding: 14px 16px; font-size: .85rem; border-top: 1px solid var(--line); }
+    .tile .cap code { font-size: .75rem; color: var(--muted); }
+    .swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; }
+    .sw { border-radius: 6px; overflow: hidden; border: 1px solid var(--line); }
+    .sw div:first-child { height: 120px; }
+    .sw .m { padding: 12px 14px; font-size: .82rem; background: #fff; }
+    .sw .m strong { display: block; }
+    .type-row { display: grid; grid-template-columns: 200px 1fr; gap: 24px; align-items: baseline; padding: 18px 0; border-top: 1px solid var(--line); }
+    .type-row small { color: var(--muted); }
+    .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .dos ul { padding-left: 18px; color: var(--steel); }
+    .dos h3 span { font-family: Inter; font-size: .75rem; letter-spacing: .14em; padding: 3px 8px; border-radius: 3px; vertical-align: middle; margin-right: 8px; }
+    .voice { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .voice .ex { background: #fff; border: 1px solid var(--line); padding: 20px; border-radius: 6px; font-size: .95rem; }
+    .voice .ex b { display: block; font-family: 'Bebas Neue'; letter-spacing: .14em; color: var(--muted); font-weight: 400; margin-bottom: 8px; }
+    table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    td, th { text-align: left; padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { font-family: 'Bebas Neue'; font-weight: 400; letter-spacing: .12em; color: var(--muted); }
+    @media (max-width: 700px) { .dos, .voice { grid-template-columns: 1fr; } .type-row { grid-template-columns: 1fr; } }
+    @media print { section { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <div class="wrap">
+      <img src="../assets/brand/logo-primary-dark.svg" alt="Conlon Interiors" style="width:min(520px,100%);margin-bottom:40px">
+      <span class="eyebrow" style="color:var(--oak)">Brand guidelines · v1.0 · October 2026</span>
+      <h1>Built by hand. Presented with care.</h1>
+      <p>How the Conlon Interiors identity works across the website, social media, print and the showroom. Keep to these and everything we put out looks like it came from the same workshop.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">01</span><h2>The idea</h2>
+      <p style="max-width:70ch;color:var(--steel);font-size:1.05rem">Conlon Interiors is a carpentry business first. The identity keeps the honesty of the original signage (bold condensed capitals, the orange rule, the hammer) and dresses it in premium interiors cues: charcoal, oak, linen, a serif for headlines and plenty of space. Confident, warm, never flashy.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">02</span><h2>Logo system</h2>
+      <p style="color:var(--steel);max-width:70ch">Four formats cover every use. Always use the supplied SVG or PNG files from <code>assets/brand/</code>; never retype the wordmark.</p>
+      <div class="grid" style="margin-top:28px">
+        <div class="tile"><div class="art dark"><img src="../assets/brand/logo-primary-dark.svg" alt=""></div><div class="cap"><strong>Primary lockup</strong><br>Signage, shop front, van, print covers.<br><code>logo-primary-dark.svg · logo-primary-light.svg</code></div></div>
+        <div class="tile"><div class="art light"><img src="../assets/brand/logo-wordmark-charcoal.svg" alt=""></div><div class="cap"><strong>Wordmark</strong><br>Website footer, documents, social posts.<br><code>logo-wordmark-charcoal.svg · logo-wordmark-white.svg</code></div></div>
+        <div class="tile"><div class="art light"><img src="../assets/brand/logo-horizontal-charcoal.svg" alt=""></div><div class="cap"><strong>Horizontal</strong><br>Website header, email signature, invoices.<br><code>logo-horizontal-charcoal.svg · logo-horizontal-white.svg</code></div></div>
+        <div class="tile"><div class="art linen"><img src="../assets/brand/mark-monogram-dark.svg" alt="" style="max-height:140px"></div><div class="cap"><strong>Monogram</strong><br>Profile pictures, favicon, app icon, stamps.<br><code>mark-monogram-dark.svg · mark-monogram-light.svg · mark-monogram-orange.svg</code></div></div>
+        <div class="tile"><div class="art light"><img src="../assets/brand/logo-mono-black.svg" alt=""></div><div class="cap"><strong>Mono</strong><br>Engraving, embroidery, single-colour print.<br><code>logo-mono-black.svg · logo-mono-white.svg</code></div></div>
+        <div class="tile"><div class="art light"><img src="../assets/brand/logo-wordmark-oak.svg" alt=""></div><div class="cap"><strong>Oak accent (premium alt)</strong><br>Brochures, gift cards, bespoke quotations.<br><code>logo-wordmark-oak.svg</code></div></div>
+      </div>
+      <div class="dos" style="margin-top:36px">
+        <div><h3><span style="background:#dcefe1;color:#1f6b3a">DO</span>Clear space & minimum size</h3><ul><li>Keep clear space around the logo equal to the height of the capital “C”.</li><li>Minimum width: 120 px on screen, 30 mm in print for the wordmark; 24 px / 8 mm for the monogram.</li><li>Use the white version on photos and dark backgrounds, charcoal on light.</li></ul></div>
+        <div><h3><span style="background:#f8dcd8;color:#8f2a1e">DON’T</span>Alter the mark</h3><ul><li>Don’t stretch, rotate, outline or add shadows.</li><li>Don’t recolour the bars anything other than ember orange, oak or the mono colour.</li><li>Don’t place the charcoal logo on busy photos without a solid panel behind it.</li><li>Don’t rebuild the service list columns with other words.</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">03</span><h2>Colour</h2>
+      <p style="color:var(--steel);max-width:70ch">Charcoal and paper carry the brand; ember orange is the accent and should never exceed about 10% of any layout. Oak is the “premium” warm neutral for borders, rules and quiet highlights.</p>
+      <div class="swatches" style="margin-top:28px">
+        <div class="sw"><div style="background:#1F262E"></div><div class="m"><strong>Charcoal</strong>#1F262E · RGB 31 38 46<br>Primary. Backgrounds, text, buttons.</div></div>
+        <div class="sw"><div style="background:#14181D"></div><div class="m"><strong>Ink</strong>#14181D<br>Body text, hover states.</div></div>
+        <div class="sw"><div style="background:#F28A1F"></div><div class="m"><strong>Ember</strong>#F28A1F · RGB 242 138 31<br>Accent, humm callouts, CTAs. Use sparingly.</div></div>
+        <div class="sw"><div style="background:#C9A97A"></div><div class="m"><strong>Oak</strong>#C9A97A<br>Warm highlight, rules, italics in headlines.</div></div>
+        <div class="sw"><div style="background:#F4EFE7;border-bottom:1px solid #e3ddd3"></div><div class="m"><strong>Linen</strong>#F4EFE7<br>Alternate section background.</div></div>
+        <div class="sw"><div style="background:#FAF7F2;border-bottom:1px solid #e3ddd3"></div><div class="m"><strong>Paper</strong>#FAF7F2<br>Page background.</div></div>
+        <div class="sw"><div style="background:#4A545F"></div><div class="m"><strong>Steel</strong>#4A545F<br>Secondary text.</div></div>
+        <div class="sw"><div style="background:#E3DDD3"></div><div class="m"><strong>Line</strong>#E3DDD3<br>Borders and dividers.</div></div>
+      </div>
+      <table style="margin-top:28px"><tr><th>Use</th><th>Combination</th></tr>
+        <tr><td>Hero / dark sections</td><td>Charcoal background, white text, oak eyebrow, ember button</td></tr>
+        <tr><td>Standard sections</td><td>Paper background, ink text, ember eyebrow, charcoal button</td></tr>
+        <tr><td>humm finance</td><td>Ember tag on white, warning text on #FFF8F0 with ember left rule</td></tr>
+        <tr><td>Print (van, signage)</td><td>Charcoal field, white wordmark, ember bars, exactly like the original sign</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">04</span><h2>Typography</h2>
+      <div class="type-row"><div><strong>Bebas Neue</strong><br><small>Brand voice · eyebrows, labels, logo</small></div><div style="font-family:'Bebas Neue';font-size:2.6rem;letter-spacing:.08em;line-height:1">FEATURE WALLS · FITTED UNITS · WARDROBES</div></div>
+      <div class="type-row"><div><strong>Cormorant Garamond</strong><br><small>Display · headlines, prices on product pages</small></div><div style="font-family:'Cormorant Garamond';font-size:2.6rem;font-weight:500;line-height:1.1">Rooms built <em style="color:var(--oak)">around you</em>, by hand.</div></div>
+      <div class="type-row"><div><strong>Inter</strong><br><small>Body · paragraphs, UI, forms</small></div><div style="font-size:1.05rem;color:var(--steel)">Qualified carpenters making media walls, fitted wardrobes and panelling to the millimetre, with a showroom of flooring, doors and furniture to finish the room.</div></div>
+      <p style="margin-top:20px;font-size:.9rem;color:var(--muted)">All three are free Google Fonts. Fallbacks: Oswald or Impact for Bebas Neue; Georgia for Cormorant; Arial for Inter. Headlines in sentence case, eyebrows in capitals with wide tracking, never all-caps body text.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">05</span><h2>Photography</h2>
+      <div class="grid">
+        <div class="tile"><img src="../assets/img/media-wall-fire-5-sm.jpg" alt="" style="width:100%;max-height:none;aspect-ratio:1;object-fit:cover"><div class="cap"><strong>Finished rooms, straight on</strong><br>Shoot the piece square-on from the middle of the room, lights on, fire on, TV off or on a calm screen.</div></div>
+        <div class="tile"><img src="../assets/img/floor-herringbone-2-sm.jpg" alt="" style="width:100%;max-height:none;aspect-ratio:1;object-fit:cover"><div class="cap"><strong>Material close-ups</strong><br>Flooring, panelling and door details in natural daylight. Let the grain do the talking.</div></div>
+        <div class="tile"><img src="../assets/img/wardrobe-5-sm.jpg" alt="" style="width:100%;max-height:none;aspect-ratio:1;object-fit:cover"><div class="cap"><strong>Inside the build</strong><br>Open wardrobe interiors, workshop shots, hands on tools. Shows the carpentry, not just the finish.</div></div>
+      </div>
+      <p style="margin-top:20px;color:var(--steel);max-width:70ch">Avoid heavy filters, clutter and phone screenshots. Tidy the room, square the camera, and crop to 1:1 for the grid and 4:5 for feature posts.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">06</span><h2>Tone of voice</h2>
+      <p style="color:var(--steel);max-width:70ch">Plain, confident, a bit of Kildare warmth. We talk like a tradesperson who knows the job, not like a furniture chain. Short sentences. Real numbers. No “luxury lifestyle” fluff.</p>
+      <div class="voice" style="margin-top:24px">
+        <div class="ex"><b>Say this</b>“Media wall measured Monday, drawn Tuesday, fitted three weeks later. One fixed price, nothing added.”</div>
+        <div class="ex"><b>Not this</b>“Elevate your living space with our luxurious bespoke entertainment solutions, tailored to your unique lifestyle.”</div>
+        <div class="ex"><b>Say this</b>“Spread the cost with humm. €1,499 sofa, from €124.92 a month over 12 months, 0% interest.”</div>
+        <div class="ex"><b>Not this</b>“Flexible finance solutions available, T&amp;Cs apply.”</div>
+      </div>
+      <table style="margin-top:28px"><tr><th>Always</th><th>Never</th></tr>
+        <tr><td>Name the town (Newbridge, Kildare)</td><td>“Nationwide leaders in…”</td></tr>
+        <tr><td>Give a from-price or a monthly figure</td><td>“Prices on request” with nothing else</td></tr>
+        <tr><td>Show the humm warning text with any finance claim</td><td>Finance claims without the regulatory line</td></tr>
+        <tr><td>Sign off with a phone number and the showroom hours</td><td>“DM for info”</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">07</span><h2>humm co-branding</h2>
+      <p style="color:var(--steel);max-width:70ch">Every finance mention carries three things: the humm tag, an illustrative or live monthly figure, and the Central Bank warning. Use the ember tag styled as on the website (orange pill, charcoal text, lowercase “humm”). Download official humm assets from the humm merchant knowledge base once the account is live and prefer those on printed material.</p>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px;margin-top:20px;font-size:.85rem;color:var(--steel)">
+        <span style="background:#F28A1F;color:#14181D;font-weight:800;padding:4px 9px;border-radius:999px">humm</span> &nbsp; Spread the cost from €80 up to €30,000.<br><br>
+        <span style="border-left:3px solid #F28A1F;padding:6px 10px;background:#fff8f0;display:block">Warning: if you do not meet the repayments on your loan, your account will go into arrears. This may affect your credit rating, which may limit your ability to access credit in the future.</span><br>
+        Flexifi Europe Limited, trading as humm, is regulated by the Central Bank of Ireland.
+      </div>
+    </div>
+  </section>
+
+  <section style="border:0">
+    <div class="wrap">
+      <span class="eyebrow">08</span><h2>Asset index</h2>
+      <table>
+        <tr><th>Folder</th><th>Contents</th></tr>
+        <tr><td><code>assets/brand/</code></td><td>17 SVG logo files (primary, wordmark, horizontal, mono, monogram, favicon) used by the website</td></tr>
+        <tr><td><code>brand/exports/logos/</code></td><td>PNG exports of every logo at 1200 px and 2400 px wide, transparent where applicable</td></tr>
+        <tr><td><code>brand/exports/icons/</code></td><td>Monogram at 180, 512, 1024 px; favicon at 32, 64, 192 px</td></tr>
+        <tr><td><code>brand/exports/social/</code></td><td>Facebook cover, profile picture, Instagram post and story templates, Google Business cover</td></tr>
+        <tr><td><code>brand/exports/print/</code></td><td>Business card (front/back), A5 flyer, A4 “Pay with humm” showroom poster as PDF and PNG</td></tr>
+        <tr><td><code>brand/email-signature.html</code></td><td>Copy-and-paste email signature</td></tr>
+        <tr><td><code>brand/launch-copy.md</code></td><td>Social captions, Google Business description, ad copy and launch announcement</td></tr>
+      </table>
+    </div>
+  </section>
+</body>
+</html>

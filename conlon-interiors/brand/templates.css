@@ -1,0 +1,19 @@
+/* Shared styles for fixed-size marketing templates (rendered to PNG/PDF) */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700;800&display=swap');
+:root { --ink:#14181d; --charcoal:#1F262E; --steel:#4a545f; --muted:#6f7780; --line:#e3ddd3; --linen:#f4efe7; --paper:#faf7f2; --oak:#C9A97A; --ember:#F28A1F; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #888; }
+body { font-family: Inter, system-ui, sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
+.canvas { position: relative; overflow: hidden; background: var(--paper); margin: 0; }
+.bebas { font-family: 'Bebas Neue', sans-serif; letter-spacing: .08em; line-height: 1; }
+.serif { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.05; letter-spacing: -.01em; }
+.serif em { font-style: italic; color: var(--oak); }
+.eyebrow { font-family: 'Bebas Neue', sans-serif; letter-spacing: .2em; color: var(--ember); display: inline-flex; align-items: center; gap: .5em; }
+.eyebrow::before { content: ''; width: 1.6em; height: .09em; background: currentColor; }
+.photo { position: absolute; inset: 0; } .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,24,29,.1), rgba(20,24,29,.85)); }
+.humm { display: inline-block; background: var(--ember); color: var(--ink); font-weight: 800; border-radius: 999px; padding: .2em .55em; line-height: 1; }
+.bar { height: .18em; background: var(--ember); border-radius: 2px; }
+.pill { display: inline-block; border: 2px solid currentColor; border-radius: 999px; padding: .35em 1em; }
+.btn { display: inline-block; background: var(--ember); color: var(--ink); font-weight: 700; padding: .7em 1.4em; border-radius: 6px; }
+.legal { color: rgba(255,255,255,.75); line-height: 1.35; }

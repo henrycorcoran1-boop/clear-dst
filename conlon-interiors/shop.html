@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop Furniture, Doors & Flooring | Conlon Interiors, Newbridge</title>
+  <meta name="description" content="Shop sofas, beds, dining, internal doors and flooring from Conlon Interiors in Newbridge. Delivery across Ireland. Spread the cost with humm.">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/catalogue.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/humm.js"></script>
+  <script src="js/cart.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__bg"><img src="assets/img/showroom-8.jpg" alt=""></div>
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Shop</span></div>
+      <span class="eyebrow">The showroom, online</span>
+      <h1 id="shopTitle">All products</h1>
+      <p class="lede" id="shopBlurb"></p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap shop-layout">
+      <aside class="filters">
+        <h4>Categories</h4>
+        <ul class="filter-list" id="filterList"></ul>
+        <h4>Search</h4>
+        <div class="field"><input type="search" id="shopSearch" placeholder="e.g. herringbone"></div>
+        <div class="humm-pill" style="margin-top:24px"><span class="humm-logo">humm</span> Spread the cost from €80</div>
+      </aside>
+      <div>
+        <div class="shop-toolbar">
+          <span id="shopCount"></span>
+          <label>Sort <select class="select" id="sortSelect"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name</option></select></label>
+        </div>
+        <div class="grid grid--3" id="shopGrid"></div>
+        <p style="margin-top:40px;font-size:.8rem;color:var(--muted)">*Illustrative humm monthly figures assume the plans listed on our <a href="finance.html" style="text-decoration:underline">finance page</a>, subject to approval. All prices include VAT. Flooring is sold per m²; fitting quoted separately.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>Can’t see it online? It’s probably in the showroom.</h2><p>Hundreds of flooring, carpet and door samples in Newbridge Industrial Estate.</p></div>
+      <a class="btn btn--primary" href="contact.html">Plan a visit</a>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+  <script src="js/shop.js"></script>
+</body>
+</html>

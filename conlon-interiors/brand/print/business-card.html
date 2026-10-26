@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../templates.css"><title>Business card 85×55 mm (front & back, 3 mm bleed)</title>
+<style>
+  /* 91 × 61 mm with bleed at 300 dpi ≈ 1075 × 720 px; safe area inset 6 mm */
+  .card { width: 1075px; height: 720px; position: relative; overflow: hidden; margin: 0 0 40px; }
+  .safe { position: absolute; inset: 70px; }
+  @page { size: 91mm 61mm; margin: 0; }
+  @media print { body { background: none; } .card { width: 91mm; height: 61mm; margin: 0; page-break-after: always; } .safe { inset: 6mm; } }
+</style></head>
+<body>
+<!-- FRONT -->
+<div class="card canvas" id="front" style="background:#1F262E;color:#fff">
+  <div class="safe" style="display:grid;place-items:center">
+    <img src="../../assets/brand/logo-primary-dark.svg" alt="" style="width:88%">
+  </div>
+</div>
+<!-- BACK -->
+<div class="card canvas" id="back" style="background:#FAF7F2;color:#14181D">
+  <div style="position:absolute;left:0;top:0;bottom:0;width:14px;background:#F28A1F"></div>
+  <div class="safe" style="display:flex;flex-direction:column;justify-content:space-between">
+    <div style="display:flex;justify-content:space-between;align-items:start">
+      <div>
+        <div class="serif" style="font-size:66px;font-weight:600">Conlon Interiors</div>
+        <div class="bebas" style="font-size:26px;letter-spacing:.2em;color:#F28A1F;margin-top:6px">Bespoke carpentry · Furniture · Flooring</div>
+      </div>
+      <img src="../../assets/brand/mark-monogram-dark.svg" alt="" style="width:120px">
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;font-size:23px;line-height:1.5;color:#2c3540">
+      <div><strong style="color:#14181D">086 467 1576</strong><br>hello@conloninteriors.ie<br>conloninteriors.ie</div>
+      <div>Unit 26C Newbridge Industrial Estate<br>Newbridge, Co. Kildare, W12 YE64<br>Open 7 days · <span class="humm" style="font-size:20px">humm</span> available</div>
+    </div>
+  </div>
+</div>
+</body></html>

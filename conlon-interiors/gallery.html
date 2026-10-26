@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Work: Media Walls, Wardrobes, Doors & Flooring | Conlon Interiors</title>
+  <meta name="description" content="Recent media walls, alcove units, fitted wardrobes, internal doors, flooring and stair carpets fitted by Conlon Interiors across Kildare and Dublin.">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/catalogue.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/humm.js"></script>
+  <script src="js/cart.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__bg"><img src="assets/img/floor-herringbone-3.jpg" alt=""></div>
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Gallery</span></div>
+      <span class="eyebrow">Recent work</span>
+      <h1>Rooms we’ve finished.</h1>
+      <p class="lede">Media walls, wardrobes, doors, flooring and stairs fitted in homes across Kildare, Dublin and beyond. Every photo is one of ours.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="pill-row" id="galleryFilters"></div>
+      <div class="masonry" id="masonry"></div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
+    <button class="lightbox__close" id="lbClose" aria-label="Close">×</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Previous">‹</button>
+    <img id="lbImg" src="" alt="">
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Next">›</button>
+  </div>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>Like what you see?</h2><p>Tell us which photo and we’ll price something similar for your room.</p></div>
+      <a class="btn btn--primary" href="contact.html">Get a quote</a>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+  <script>
+    const GALLERY = [
+      ['Media walls', ['hero-media-wall', 'media-wall-fire-1', 'media-wall-fire-2', 'media-wall-fire-3', 'media-wall-fire-4', 'media-wall-fire-5', 'media-wall-fire-6', 'media-wall-fire-7', 'media-wall-fire-8', 'media-wall-fire-9', 'media-wall-slat-navy']],
+      ['Alcove units', ['alcove-units-1', 'alcove-units-2', 'alcove-units-3']],
+      ['Wardrobes', ['wardrobe-1', 'wardrobe-2', 'wardrobe-3', 'wardrobe-4', 'wardrobe-5', 'wardrobe-6', 'wardrobe-7', 'wardrobe-8']],
+      ['Doors', ['door-black-glazed-1', 'door-black-glazed-2', 'door-black-glazed-3', 'door-black-glazed-4', 'door-black-glazed-5', 'door-shaker-1', 'door-shaker-2', 'door-glazed-1', 'door-glazed-2', 'door-glazed-3', 'door-oak-1', 'door-oak-2', 'door-grey-1', 'door-white-1', 'door-white-2', 'door-white-3', 'door-white-4']],
+      ['Flooring', ['floor-herringbone-1', 'floor-herringbone-2', 'floor-herringbone-3', 'floor-herringbone-4', 'floor-herringbone-5', 'floor-herringbone-6', 'floor-herringbone-7', 'floor-plank-1', 'floor-plank-2', 'floor-plank-3', 'floor-plank-4', 'floor-plank-5']],
+      ['Stairs', ['stairs-carpet-1', 'stairs-carpet-2', 'stairs-carpet-3', 'stairs-carpet-4', 'stairs-carpet-5', 'stairs-carpet-6', 'stairs-carpet-7', 'stairs-carpet-8']],
+      ['Kitchens & decking', ['kitchen-1', 'kitchen-2', 'kitchen-3', 'decking-1', 'decking-2', 'decking-3']],
+      ['Furniture', ['sofa-recliner-1', 'sofa-recliner-2', 'armchair-recliner', 'sofa-recliner-3', 'bed-1', 'mattress-1', 'dining-1']],
+      ['Showroom', ['showroom-1', 'showroom-2', 'showroom-3', 'showroom-4', 'showroom-5', 'showroom-6', 'showroom-7', 'showroom-8', 'showroom-9', 'showroom-10', 'showroom-11', 'showroom-12']]
+    ];
+    let current = 'All', list = [], idx = 0;
+    function items() { return GALLERY.filter(([c]) => current === 'All' || c === current).flatMap(([c, ims]) => ims.map(i => ({ c, i }))); }
+    function render() {
+      list = items();
+      qs('#masonry').innerHTML = list.map((it, n) => `<figure data-n="${n}"><img src="${imgUrl(it.i, true)}" alt="${esc(it.c)} by Conlon Interiors" loading="lazy"><figcaption>${esc(it.c)}</figcaption></figure>`).join('');
+      qsa('#masonry figure').forEach(f => f.addEventListener('click', () => openLb(+f.dataset.n)));
+      qsa('#galleryFilters .pill').forEach(p => p.classList.toggle('is-active', p.dataset.cat === current));
+    }
+    function openLb(n) { idx = n; qs('#lbImg').src = imgUrl(list[idx].i); qs('#lightbox').classList.add('is-open'); }
+    function step(d) { idx = (idx + d + list.length) % list.length; qs('#lbImg').src = imgUrl(list[idx].i); }
+    document.addEventListener('site:ready', () => {
+      qs('#galleryFilters').innerHTML = ['All', ...GALLERY.map(([c]) => c)].map(c => `<button class="pill" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
+      qsa('#galleryFilters .pill').forEach(p => p.addEventListener('click', () => { current = p.dataset.cat; render(); }));
+      qs('#lbClose').addEventListener('click', () => qs('#lightbox').classList.remove('is-open'));
+      qs('#lightbox').addEventListener('click', (e) => { if (e.target.id === 'lightbox') qs('#lightbox').classList.remove('is-open'); });
+      qs('#lbPrev').addEventListener('click', () => step(-1)); qs('#lbNext').addEventListener('click', () => step(1));
+      document.addEventListener('keydown', e => { if (!qs('#lightbox').classList.contains('is-open')) return; if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1); if (e.key === 'Escape') qs('#lightbox').classList.remove('is-open'); });
+      render();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bespoke Carpentry: Media Walls, Wardrobes, Panelling | Conlon Interiors</title>
+  <meta name="description" content="Made-to-measure media walls, alcove units, fitted wardrobes, panelling, kitchens and decking by qualified carpenters in Newbridge, Co. Kildare. Free quotes, humm finance available.">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/catalogue.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/humm.js"></script>
+  <script src="js/cart.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__bg"><img src="assets/img/media-wall-fire-7.jpg" alt=""></div>
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Bespoke carpentry</span></div>
+      <span class="eyebrow">Made in our Newbridge workshop</span>
+      <h1>Bespoke carpentry, fitted by the people who built it.</h1>
+      <p class="lede">Media walls, alcove units, wardrobes, panelling, kitchens and decking, designed around your room and finished by qualified carpenters. Every job starts with a free measure-up and a fixed quote.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px"><a class="btn btn--ember" href="contact.html?subject=Design%20consultation">Book a free consultation</a><a class="btn btn--light" href="gallery.html">See the work</a></div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap" id="services"></div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="wrap">
+      <div class="section-head reveal"><div><span class="eyebrow">The process</span><h2>Four steps, one team.</h2></div></div>
+      <div class="steps">
+        <div class="step reveal"><h3>Measure</h3><p>Send photos and rough sizes on WhatsApp for a guide price, then we visit to measure properly. Free within Kildare and surrounding counties.</p></div>
+        <div class="step reveal"><h3>Design</h3><p>A drawing of the piece in your room, with fire, lighting, colour and panelling choices. One fixed price, nothing added later.</p></div>
+        <div class="step reveal"><h3>Build</h3><p>Built in our workshop so the disruption at home is days, not weeks. Spray-painted in any colour you like.</p></div>
+        <div class="step reveal"><h3>Fit & finish</h3><p>Our carpenters fit it, connect the fire and lighting, and leave the room clean. Pay by card, transfer or humm.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--linen">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Finance your project</span>
+        <h2>Spread the cost of bespoke work with humm.</h2>
+        <p class="lede">A media wall or fitted wardrobes can be financed through humm up to €30,000, with interest-free plans available. Get pre-approved before your consultation and we’ll build the figures into your quote.</p>
+        <div id="svcHumm"></div>
+      </div>
+      <div class="frame reveal"><img src="assets/img/wardrobe-5.jpg" alt="Fitted wardrobe interior with shelving and drawers"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap faq" style="max-width:800px">
+      <span class="eyebrow">Questions</span>
+      <h2>Bespoke work, answered.</h2>
+      <details><summary>How much does a media wall cost?</summary><p>Most media walls we build fall between €3,500 and €7,500 depending on size, the electric fire chosen, panelling and lighting. We give a fixed price after measuring.</p></details>
+      <details><summary>Do you supply the electric fire?</summary><p>Yes. We supply and fit fires from leading brands in one-, two- and three-sided styles, or build around a fire you already own.</p></details>
+      <details><summary>How long does fitting take?</summary><p>Because we build in the workshop, most media walls and alcove units are fitted in one to two days. Wardrobes and kitchens take two to five days depending on size.</p></details>
+      <details><summary>Where do you cover?</summary><p>Kildare, Dublin, Meath, Wicklow, Laois, Offaly and Carlow as standard. Further afield by arrangement.</p></details>
+      <details><summary>Can I pay with humm for bespoke work?</summary><p>Yes. Get pre-approved with humm for your quoted amount, and we complete the humm purchase with you when you sign off the design. Interest-free plans are available; terms and eligibility are confirmed by humm.</p></details>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>Ready to design your feature wall?</h2><p>Send us a photo of the room on WhatsApp and we’ll come back with ideas and a guide price.</p></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn--primary" href="https://wa.me/353864671576?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20feature%20wall." target="_blank" rel="noopener">WhatsApp a photo</a><a class="btn btn--ghost" href="contact.html">Contact form</a></div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+  <script>
+    document.addEventListener('site:ready', () => {
+      const svc = CATALOGUE.products.filter(p => p.type === 'bespoke');
+      qs('#services').innerHTML = svc.map(p => `
+        <div class="service reveal" id="${p.id}">
+          <img src="${imgUrl(p.img)}" alt="${esc(p.name)}" loading="lazy">
+          <div>
+            <span class="eyebrow">${esc(p.badge || 'Made to measure')}</span>
+            <h2 style="font-size:clamp(1.8rem,3vw,2.5rem)">${esc(p.name)}</h2>
+            <p class="lede">${esc(p.description)}</p>
+            <ul>${(p.specs || []).map(s => `<li>${esc(s)}</li>`).join('')}</ul>
+            <div class="from">From ${money0(p.price)} <small>· typical lead time ${esc(p.lead)}</small></div>
+            ${HUMM.fromLine(p.price)}
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px"><a class="btn btn--primary" href="contact.html?subject=${encodeURIComponent('Quote: ' + p.name)}">Request a quote</a><a class="btn btn--ghost" href="product.html?id=${p.id}">Details & photos</a></div>
+          </div>
+        </div>`).join('');
+      const hb = qs('#svcHumm'); hb.innerHTML = HUMM.box(5000); HUMM.bind(hb);
+      qsa('.reveal').forEach(el => { const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } }), { threshold: .08 }); io.observe(el); });
+    });
+  </script>
+</body>
+</html>

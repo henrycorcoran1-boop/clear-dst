@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Conlon Interiors</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/catalogue.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/humm.js"></script>
+  <script src="js/cart.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <span class="eyebrow">Secure checkout</span>
+      <h1 style="font-size:clamp(2rem,4vw,3rem)">Checkout</h1>
+      <div class="cart-layout" style="margin-top:28px">
+        <div>
+          <div class="checkout-steps" id="steps">
+            <span class="is-active" data-step="1">1. Your details</span>
+            <span data-step="2">2. Delivery</span>
+            <span data-step="3">3. Payment</span>
+            <span data-step="4">4. Review</span>
+          </div>
+          <form id="checkoutForm" novalidate>
+            <!-- Step 1 -->
+            <div class="panel step-panel is-active" data-panel="1">
+              <h3>Your details</h3>
+              <div class="form-grid">
+                <div class="field"><label for="firstName">First name</label><input id="firstName" name="firstName" required autocomplete="given-name"><div class="field__error">Please enter your first name.</div></div>
+                <div class="field"><label for="lastName">Surname</label><input id="lastName" name="lastName" required autocomplete="family-name"><div class="field__error">Please enter your surname.</div></div>
+                <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"><div class="field__error">Please enter a valid email address.</div></div>
+                <div class="field"><label for="phone">Mobile</label><input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="08x xxx xxxx"><div class="field__error">Please enter a mobile number.</div></div>
+              </div>
+              <div class="step-actions"><span></span><button type="button" class="btn btn--primary" data-next="2">Continue to delivery</button></div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="panel step-panel" data-panel="2">
+              <h3>Delivery or collection</h3>
+              <div id="deliveryChoices"></div>
+              <div id="addressBlock" style="margin-top:18px">
+                <div class="form-grid">
+                  <div class="field full"><label for="address1">Address line 1</label><input id="address1" name="address1" autocomplete="address-line1"><div class="field__error">Please enter your address.</div></div>
+                  <div class="field full"><label for="address2">Address line 2 <span style="text-transform:none;letter-spacing:0">(optional)</span></label><input id="address2" name="address2" autocomplete="address-line2"></div>
+                  <div class="field"><label for="town">Town</label><input id="town" name="town" autocomplete="address-level2"><div class="field__error">Please enter your town.</div></div>
+                  <div class="field"><label for="county">County</label><select id="county" name="county"></select><div class="field__error">Please choose a county.</div></div>
+                  <div class="field"><label for="eircode">Eircode</label><input id="eircode" name="eircode" autocomplete="postal-code" placeholder="e.g. W12 YE64"><div class="field__error">Please enter your Eircode.</div></div>
+                  <div class="field full"><label for="notes">Delivery notes <span style="text-transform:none;letter-spacing:0">(optional)</span></label><textarea id="notes" name="notes" rows="2" placeholder="Access, parking, preferred days…"></textarea></div>
+                </div>
+              </div>
+              <div class="step-actions"><button type="button" class="btn btn--ghost" data-prev="1">Back</button><button type="button" class="btn btn--primary" data-next="3">Continue to payment</button></div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="panel step-panel" data-panel="3">
+              <h3>How would you like to pay?</h3>
+              <div id="paymentChoices"></div>
+              <div class="step-actions"><button type="button" class="btn btn--ghost" data-prev="2">Back</button><button type="button" class="btn btn--primary" data-next="4">Review order</button></div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="panel step-panel" data-panel="4">
+              <h3>Review and place your order</h3>
+              <div id="review"></div>
+              <div class="field" style="margin-top:18px"><label style="display:flex;gap:10px;align-items:start;text-transform:none;letter-spacing:0;font-size:.88rem;color:var(--steel)"><input type="checkbox" id="agree" style="width:auto;margin-top:3px"> I agree to the <a href="terms.html" target="_blank" style="text-decoration:underline">terms of sale</a> and <a href="privacy.html" target="_blank" style="text-decoration:underline">privacy policy</a>.</label><div class="field__error">Please accept the terms to continue.</div></div>
+              <div class="step-actions"><button type="button" class="btn btn--ghost" data-prev="3">Back</button><button type="submit" class="btn btn--ember btn--lg" id="placeOrder">Place order</button></div>
+              <p style="font-size:.78rem;color:var(--muted);margin-top:14px" id="placeNote"></p>
+            </div>
+          </form>
+        </div>
+
+        <aside class="panel panel--sticky" id="orderSummary"></aside>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact & Showroom | Conlon Interiors, Newbridge</title>
+  <meta name="description" content="Visit Conlon Interiors at Unit 26C Newbridge Industrial Estate, Co. Kildare. Open seven days. Call 086 467 1576 or WhatsApp for quotes on carpentry, flooring and furniture.">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/catalogue.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/humm.js"></script>
+  <script src="js/cart.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__bg"><img src="assets/img/showroom-2.jpg" alt=""></div>
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact</span></div>
+      <span class="eyebrow">Get in touch</span>
+      <h1>Call in, call us, or send a photo.</h1>
+      <p class="lede">The quickest way to a quote is a photo of the room on WhatsApp. For everything else, the showroom is open seven days a week.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap contact-grid">
+      <div>
+        <ul class="info-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Showroom</strong>Unit 26C Newbridge Industrial Estate<br>Newbridge, Co. Kildare, W12 YE64<br><a href="https://www.google.com/maps/search/?api=1&query=Unit+26C+Newbridge+Industrial+Estate+Newbridge+W12YE64" target="_blank" rel="noopener" style="text-decoration:underline">Open in Google Maps</a></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><strong>Phone & WhatsApp</strong><a href="tel:+353864671576">086 467 1576</a><br><a href="https://wa.me/353864671576" target="_blank" rel="noopener" style="text-decoration:underline">Message us on WhatsApp</a></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><strong>Email</strong><a href="mailto:hello@conloninteriors.ie">hello@conloninteriors.ie</a></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><strong>Opening hours</strong><table class="hours-table" id="contactHours" style="margin-top:6px"></table></div></li>
+        </ul>
+        <iframe class="map" style="margin-top:28px" title="Map to Conlon Interiors" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Unit+26C+Newbridge+Industrial+Estate,+Newbridge,+Co.+Kildare,+W12+YE64&output=embed"></iframe>
+      </div>
+      <div class="panel">
+        <h3>Send an enquiry</h3>
+        <form id="contactForm" novalidate>
+          <div class="form-grid">
+            <div class="field"><label for="cName">Name</label><input id="cName" required><div class="field__error">Please enter your name.</div></div>
+            <div class="field"><label for="cPhone">Phone</label><input id="cPhone" type="tel" required><div class="field__error">Please enter a phone number.</div></div>
+            <div class="field full"><label for="cEmail">Email</label><input id="cEmail" type="email" required><div class="field__error">Please enter a valid email.</div></div>
+            <div class="field full"><label for="cSubject">What is it about?</label><select id="cSubject"><option>Design consultation</option><option>Quote: Bespoke Media Wall</option><option>Quote: Fitted Wardrobes</option><option>Quote: Alcove Units & Shelving</option><option>Quote: Wall Panelling</option><option>Quote: Fitted Kitchens</option><option>Quote: Composite Decking</option><option>Flooring or stairs</option><option>Doors</option><option>Furniture</option><option>humm finance</option><option>Something else</option></select></div>
+            <div class="field full"><label for="cTown">Town / county</label><input id="cTown" placeholder="e.g. Naas, Co. Kildare"></div>
+            <div class="field full"><label for="cMsg">Message</label><textarea id="cMsg" rows="5" required placeholder="Tell us about the room, rough sizes, and what you have in mind."></textarea><div class="field__error">Please add a short message.</div></div>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;align-items:center">
+            <button class="btn btn--primary" type="submit">Send enquiry</button>
+            <a class="btn btn--ghost" href="https://wa.me/353864671576" target="_blank" rel="noopener">Or WhatsApp a photo</a>
+          </div>
+          <p style="font-size:.78rem;color:var(--muted);margin-top:14px" id="contactNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+  <script>
+    document.addEventListener('site:ready', () => {
+      qs('#contactHours').innerHTML = SITE.business.hours.map(h => `<tr><td>${h.days}</td><td>${h.time}</td></tr>`).join('');
+      const subj = param('subject'); if (subj) { const sel = qs('#cSubject'); const opt = Array.from(sel.options).find(o => o.text === subj); if (opt) opt.selected = true; else { const o = document.createElement('option'); o.text = subj; o.selected = true; sel.prepend(o); } }
+      qs('#contactNote').textContent = SITE.orders.endpoint ? 'We reply within one working day.' : 'Sending opens your email app with the message filled in. We reply within one working day.';
+      const form = qs('#contactForm');
+      const v = id => qs('#' + id).value.trim();
+      const chk = (id, ok) => { qs('#' + id).closest('.field').classList.toggle('is-invalid', !ok); return ok; };
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        let ok = chk('cName', v('cName').length > 1); ok = chk('cPhone', v('cPhone').replace(/\D/g, '').length >= 7) && ok; ok = chk('cEmail', /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('cEmail'))) && ok; ok = chk('cMsg', v('cMsg').length > 5) && ok;
+        if (!ok) return;
+        const payload = { subject: v('cSubject'), name: v('cName'), phone: v('cPhone'), email: v('cEmail'), town: v('cTown'), message: v('cMsg'), _replyto: v('cEmail') };
+        let sent = false;
+        if (SITE.orders.endpoint) { try { const r = await fetch(SITE.orders.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) }); sent = r.ok; } catch {} }
+        if (!sent) {
+          const body = `Name: ${payload.name}\nPhone: ${payload.phone}\nEmail: ${payload.email}\nTown: ${payload.town}\n\n${payload.message}`;
+          window.location.href = `mailto:${SITE.business.email}?subject=${encodeURIComponent(payload.subject)}&body=${encodeURIComponent(body)}`;
+        }
+        toast(sent ? 'Thanks, your enquiry has been sent.' : 'Your email app should now be open. Press send and we’ll be in touch.');
+        if (sent) form.reset();
+      });
+      qsa('.field input, .field textarea').forEach(i => i.addEventListener('input', () => i.closest('.field').classList.remove('is-invalid')));
+    });
+  </script>
+</body>
+</html>

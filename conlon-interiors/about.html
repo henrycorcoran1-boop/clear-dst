@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Conlon Interiors | Carpenters & Showroom, Newbridge</title>
+  <meta name="description" content="Conlon Interiors is a family carpentry business and showroom in Newbridge Industrial Estate, Co. Kildare. Qualified carpenters, feature walls, wardrobes, flooring and furniture.">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/catalogue.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/humm.js"></script>
+  <script src="js/cart.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__bg"><img src="assets/img/media-wall-slat-navy.jpg" alt=""></div>
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>About</span></div>
+      <span class="eyebrow">Our story</span>
+      <h1>“I’m a qualified carpenter, not a content creator.”</h1>
+      <p class="lede">That line from our Facebook page says most of it. We’d rather be in the workshop than in front of a camera, and it shows in the work.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Newbridge, Co. Kildare</span>
+        <h2>A carpentry workshop with a showroom attached.</h2>
+        <p class="lede">Conlon Interiors started as a carpentry business: feature walls, fitted units, wardrobes and panelling, built properly and fitted by the people who made them. The showroom in Newbridge Industrial Estate grew out of customers asking us where to get the flooring, doors and furniture to finish the room.</p>
+        <p style="color:var(--steel)">Today you can walk in seven days a week, run your hand over the flooring samples, sit on the sofas, pick a door, and talk to the carpenter who’ll build your media wall. Everything is priced plainly and you can spread the cost with humm.</p>
+        <div class="stats">
+          <div><strong>7</strong><span>days a week in the showroom</span></div>
+          <div><strong>94%</strong><span>recommend us on Facebook</span></div>
+          <div><strong>1.7k</strong><span>followers watching the work</span></div>
+        </div>
+      </div>
+      <div class="frame reveal"><img src="assets/img/media-wall-fire-9.jpg" alt="Media wall with slat panelling and electric fire fitted by Conlon Interiors"><div class="frame__caption"><strong>Our workshop standard</strong>Painted, lit, fitted by us</div></div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="wrap">
+      <div class="section-head reveal"><div><span class="eyebrow">What we stand for</span><h2>Three promises on every job.</h2></div></div>
+      <div class="grid grid--3">
+        <div class="reveal"><h3>Built, not bought in.</h3><p style="color:#c3c9cf">Bespoke pieces are made in our own workshop by qualified carpenters. Nothing is flat-packed and nothing is subcontracted.</p></div>
+        <div class="reveal"><h3>One fixed price.</h3><p style="color:#c3c9cf">We measure, draw and quote before anything is cut. The price we give is the price you pay.</p></div>
+        <div class="reveal"><h3>Clean finish, clean room.</h3><p style="color:#c3c9cf">We fit it, connect the fire and lighting, and leave the room ready to use, with the dust gone.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--linen">
+    <div class="wrap split split--rev">
+      <div class="frame frame--wide reveal"><img src="assets/img/showroom-9.jpg" alt="Flooring samples in the Conlon Interiors showroom"></div>
+      <div class="reveal">
+        <span class="eyebrow">The showroom</span>
+        <h2>Come in and see it for yourself.</h2>
+        <p class="lede">Hundreds of flooring, carpet and door samples, sofas to sit on, beds to lie on, and a full media wall built in the shop so you can see the standard.</p>
+        <table class="hours-table" id="aboutHours"></table>
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn--primary" href="contact.html">Directions</a><a class="btn btn--ghost" href="gallery.html">Gallery</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+  <script>
+    document.addEventListener('site:ready', () => {
+      qs('#aboutHours').innerHTML = SITE.business.hours.map(h => `<tr><td>${h.days}</td><td>${h.time}</td></tr>`).join('');
+    });
+  </script>
+</body>
+</html>

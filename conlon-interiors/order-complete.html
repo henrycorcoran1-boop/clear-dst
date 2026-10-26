@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Received | Conlon Interiors</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/catalogue.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/humm.js"></script>
+  <script src="js/cart.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="section">
+    <div class="wrap" style="max-width:760px">
+      <span class="eyebrow">Thank you</span>
+      <h1 style="font-size:clamp(2rem,4vw,3rem)">Your order is on its way to us.</h1>
+      <p class="lede">Order reference <strong id="ref"></strong>. We’ll confirm by email or phone within one working day.</p>
+      <div id="sentNote"></div>
+      <div class="panel" style="margin-top:28px" id="orderDetail"></div>
+      <div id="nextSteps" style="margin-top:28px"></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
+        <a class="btn btn--primary" href="shop.html">Continue shopping</a>
+        <a class="btn btn--ghost" href="contact.html">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+  <script>
+    document.addEventListener('site:ready', () => {
+      const ref = param('ref') || '';
+      const sent = param('sent') === '1';
+      qs('#ref').textContent = ref;
+      let o = null; try { o = JSON.parse(localStorage.getItem('ci_last_order')); } catch {}
+      qs('#sentNote').innerHTML = sent
+        ? `<div class="notice notice--ok">Your order has been sent to our team.</div>`
+        : `<div class="notice">Your email app should have opened with the order filled in. <strong>Please press send</strong> so it reaches us. If it didn’t open, call <a href="tel:${SITE.business.phone}" style="text-decoration:underline">${SITE.business.phoneDisplay}</a> or WhatsApp us and quote <strong>${esc(ref)}</strong>.</div>`;
+      if (o) {
+        qs('#orderDetail').innerHTML = `<h3>Order details</h3>` + o.items.map(i => `<div class="summary-line"><span>${i.qty} × ${esc(i.name)}<small>${esc(Object.entries(i.options || {}).map(([k, v]) => k + ': ' + v).join(' · '))}</small></span><span>${money(i.line)}</span></div>`).join('') +
+          `<div class="totals" style="margin-top:14px"><div><span>Delivery</span><span>${o.delivery.fee ? money(o.delivery.fee) : 'Free'}</span></div><div class="totals__grand"><span>Total</span><span>${money(o.total)}</span></div></div>`;
+        const steps = {
+          humm: `<h3>Next: finish your humm plan</h3><ol style="color:var(--steel);padding-left:18px"><li>If you haven’t already, get pre-approved at <a href="${SITE.humm.applyUrl}" target="_blank" rel="noopener" style="text-decoration:underline">apply.humm.ie</a> for at least ${money(o.total)}.</li><li>We’ll call you to complete the humm purchase using your acceptance code${o.payment.hummCode ? ` (<strong>${esc(o.payment.hummCode)}</strong>)` : ''}.</li><li>Once humm confirms, your order goes into production or delivery.</li></ol><p class="humm-legal">${SITE.humm.legal.warning} ${SITE.humm.legal.regulated}</p>`,
+          transfer: `<h3>Next: payment</h3><p style="color:var(--steel)">We’ll email bank details with your reference <strong>${esc(ref)}</strong>, or call to take card payment. Your order is confirmed once payment clears.</p>`,
+          showroom: `<h3>Next: visit the showroom</h3><p style="color:var(--steel)">We’re holding your order for 7 days. Call in to ${SITE.business.address.line1}, Newbridge (Mon–Sat 9–5, Sun & Bank Hols 11–4) and quote <strong>${esc(ref)}</strong>.</p>`
+        };
+        qs('#nextSteps').innerHTML = steps[o.payment.method] || '';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pay with humm: Spread the Cost up to €30,000 | Conlon Interiors</title>
+  <meta name="description" content="Spread the cost of furniture, flooring, doors and bespoke carpentry with humm at Conlon Interiors, Newbridge. Interest-free plans available, decisions in minutes.">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/catalogue.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/humm.js"></script>
+  <script src="js/cart.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__bg"><img src="assets/img/sofa-recliner-2.jpg" alt=""></div>
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Pay with humm</span></div>
+      <span class="eyebrow">Finance</span>
+      <h1>Buy now, pay in slices with <span style="background:var(--ember);color:var(--ink);padding:0 .25em;border-radius:6px;font-family:var(--font-body);font-weight:800;font-size:.75em;vertical-align:middle">humm</span></h1>
+      <p class="lede">Spread the cost of anything in the showroom, online or made to measure, from €80 up to €30,000. Interest-free plans available. Get a decision in as little as five minutes.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px"><a class="btn btn--ember" href="https://apply.humm.ie/s/" target="_blank" rel="noopener">Get pre-approved now</a><a class="btn btn--light" href="#calculator">Try the calculator</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal"><div><span class="eyebrow">How it works</span><h2>Three steps to spreading the cost.</h2></div></div>
+      <div class="humm-steps">
+        <div class="humm-step reveal"><h3>Apply with humm</h3><p style="color:var(--steel)">Head to <a href="https://apply.humm.ie/s/" target="_blank" rel="noopener" style="text-decoration:underline">apply.humm.ie</a> and apply for the amount you’d like to spend. You’ll need photo ID, your PPS number, proof of address and a bank card in your name. Most decisions take about five minutes.</p></div>
+        <div class="humm-step reveal"><h3>Choose humm at checkout</h3><p style="color:var(--steel)">Online, pick “Spread the cost with humm” at checkout and enter your acceptance code. In the showroom, just tell us you’d like to pay with humm and have your phone ready.</p></div>
+        <div class="humm-step reveal"><h3>Pay in slices</h3><p style="color:var(--steel)">Your purchase must be equal to or less than your approved amount. Repayments are taken automatically from your card, fortnightly or monthly, over the term you choose.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--linen" id="calculator">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Calculator</span>
+        <h2>What would it cost per month?</h2>
+        <p class="lede">Move the slider or type a price to see illustrative monthly payments. The live humm widget replaces these figures once our merchant account is connected.</p>
+        <div class="field" style="margin:20px 0"><label for="calcAmount">Purchase amount (€)</label><input type="number" id="calcAmount" value="1499" min="80" max="30000" step="10"></div>
+        <input type="range" id="calcRange" min="80" max="10000" step="10" value="1499" style="width:100%;accent-color:var(--ember)">
+      </div>
+      <div class="reveal" id="calcBox"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap" style="max-width:860px">
+      <div class="grid grid--2">
+        <div class="panel reveal">
+          <h3>Who can apply</h3>
+          <ul class="specs" style="margin:0">
+            <li>18 years or over</li>
+            <li>Permanent resident or citizen of Ireland</li>
+            <li>Minimum income of €1,500 a month</li>
+            <li>Good credit history</li>
+            <li>Photo ID, PPS number, proof of address, bank card in your name</li>
+          </ul>
+          <p style="font-size:.8rem;color:var(--muted);margin-top:12px">Eligibility is set and assessed by humm. <a href="https://www.shophumm.com/ie/faqs/am-i-eligible-for-humm/" target="_blank" rel="noopener" style="text-decoration:underline">Check your eligibility</a>.</p>
+        </div>
+        <div class="panel reveal">
+          <h3>Fees and rates</h3>
+          <p style="color:var(--steel);font-size:.95rem">Interest rates run from 0% to 14.99% per annum depending on the plan. Application fees range from €10 to €50 and account-keeping fees from €1 to €20 per month, depending on the plan. A €9 dishonour fee applies if a payment is missed and not resolved. You can repay early at no extra charge.</p>
+          <p style="color:var(--steel);font-size:.95rem"><strong>Representative example (humm):</strong> €800 over 12 months at 4.99% variable, €15 application fee, €2/month account-keeping fee: APR 14.90%, total cost of credit €60.77, total payable €860.77.</p>
+          <p style="font-size:.8rem;color:var(--muted);margin:0">Figures published by humm Ireland and confirmed at application. Interest-free plans are available on selected terms.</p>
+        </div>
+      </div>
+      <div class="humm-warning reveal" style="margin-top:24px;font-size:.9rem" id="finWarn"></div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap faq" style="max-width:800px">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common questions.</h2>
+      <details><summary>Can I use humm for bespoke work like a media wall?</summary><p>Yes. Get pre-approved for the quoted amount and we’ll complete the humm purchase with you when you confirm the design.</p></details>
+      <details><summary>Is there a deposit?</summary><p>Depending on the plan, your first instalment may be taken when the purchase is completed. humm shows the schedule before you confirm.</p></details>
+      <details><summary>Can I buy part of my order with humm?</summary><p>In the showroom, yes: you can part-pay with humm and the rest by card. Online orders use humm for the full amount.</p></details>
+      <details><summary>What if I already have a humm account?</summary><p>Log in at <a href="https://myaccount.humm.ie/s/login/" target="_blank" rel="noopener" style="text-decoration:underline">myaccount.humm.ie</a> to check your available limit, then shop as normal.</p></details>
+      <details><summary>Who provides the credit?</summary><p>humm is a trading name of Flexifi Europe Limited, regulated by the Central Bank of Ireland. Conlon Interiors introduces customers to humm and does not provide credit itself.</p></details>
+    </div>
+  </section>
+
+  <section class="section section--tight section--linen">
+    <div class="wrap">
+      <p style="text-align:center;font-size:.85rem;color:var(--muted);margin-bottom:12px">More about humm, straight from humm</p>
+      <iframe src="https://cdn.shophumm.com/humm/partners/ie/index.html" title="humm Ireland partner information" loading="lazy" style="width:100%;height:900px;border:1px solid var(--line);border-radius:4px;background:#fff"></iframe>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+  <script>
+    document.addEventListener('site:ready', () => {
+      const a = qs('#calcAmount'), r = qs('#calcRange'), box = qs('#calcBox');
+      function draw() { const v = Math.max(1, +a.value || 0); box.innerHTML = HUMM.box(v); HUMM.bind(box); }
+      a.addEventListener('input', () => { r.value = Math.min(10000, +a.value); draw(); });
+      r.addEventListener('input', () => { a.value = r.value; draw(); });
+      draw();
+      qs('#finWarn').textContent = SITE.humm.legal.warning + ' ' + SITE.humm.legal.regulated;
+    });
+  </script>
+</body>
+</html>
